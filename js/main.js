@@ -3,7 +3,7 @@ var publisher = false;
 var class_A = false;
 var class_B = false;
 var class_C = false;
-var myURL = "http://127.0.0.1/tasnif/api.php";
+var myURL = "https://127.0.0.1/tasnif/api.php";
 
 function get_data(data) {
     var a = $.ajax(data["url"], {
@@ -19,11 +19,11 @@ function get_data(data) {
         contentType: false,
 
         xhrFields: {
-            // 'Access-Control-Allow-Credentials: true'.
+            //'Access-Control-Allow-Credentials: true'.
             withCredentials: false
         },
         headers: {
-            "Access-Control-Allow-Origin": true
+            "Access-Control-Allow-Origin": "*" //true
         },
         success: function (response) {
             data["success"]();
