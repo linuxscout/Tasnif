@@ -6,6 +6,30 @@
   src: local('Montserrat Light'), local('Montserrat-Light'), url(../fonts/JTURjIg1_i6t8kCHKm45_cJD3gTD_u50.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
+/* Arabic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(../fonts/DroidNaskh-Regular-Colored.woff) format('woff2');
+  unicode-range: U+0600-06FF;
+}
+/* Arabic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(../fonts/DroidNaskh-Regular-Colored.woff) format('woff2');
+  unicode-range: U+0600-06FF;
+}
+/* Arabic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(../fonts/DroidNaskh-Regular-Colored.woff) format('woff2');
+  unicode-range: U+0600-06FF;
+}
 /* cyrillic */
 @font-face {
   font-family: 'Montserrat';

@@ -3,7 +3,6 @@ var publisher = false;
 var class_A = false;
 var class_B = false;
 var class_C = false;
-var myURL = "http://127.0.0.1/tasnif/api.php";
 
 function get_data(data) {
     var a = $.ajax(data["url"], {
@@ -37,7 +36,6 @@ function get_data(data) {
 }
 
 function make_result_card(data) {
-    url = (data["url"] == "")? "https://www.scimagojr.com/journalsearch.php?q=" + data["titre"] : data["url"];
     return `
     <div class="card mb-3">
         <div class="card-body">
@@ -46,7 +44,7 @@ function make_result_card(data) {
                 <p class="class">CLASS :(` + data["category"] + `)</p>
                 <p class="pub">Publisher:` + data["publisher"] + ` | ISSN: ` + data["issn"] + `, ESSN : ` + data["essn"] + `</p>
             </p>
-            <a href="` + url + `"
+            <a href="` + data["url"] + `"
                 class="card-link">Magazine home page</a>
         </div>
     </div>`;
@@ -72,7 +70,8 @@ function fill_search_results(time = false) {
     page++;
     var t0 = performance.now();
     let r = get_data({
-        "url": myURL,
+        "url": "http://127.0.0.1/tasnif/api.php",
+        //~ "url": "http://tahadz.com/tasnif/api.php",
         "formData": formData,
         "success": function () {},
         "fail": function () {}
